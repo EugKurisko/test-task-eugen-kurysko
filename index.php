@@ -33,7 +33,7 @@ switch ($method) {
 
     case "POST":
         $rawInput = file_get_contents("php://input");
-        $data = json_decode($rawInput, true);        var_dump($data);
+        $data = json_decode($rawInput, true);
         try {
             $newIncident = $incident->create($data);
             Response::json($newIncident, 201);
